@@ -27,7 +27,18 @@
 
     <bean class="InsertUsingInterface.StudentDaoImplements" name="studentDao">
         <property name="jdbcTemplate" ref="jdbcTemplate"/>
+    </bean>
 
+    <bean class="UpdateUsingInterface.StudentDaoImplements" name="updatestudentDao">
+        <property name="jdbcTemplate" ref="jdbcTemplate"/>
+    </bean>
+
+    <bean class="DeleteUsingInterface.StudentDaoImplements" name="deletestudentDao">
+        <property name="jdbcTemplate" ref="jdbcTemplate"/>
+    </bean>
+
+    <bean class="SelectQueryImplementation.StudentDaoImplements" name="selectstudentDao">
+        <property name="jdbcTemplate" ref="jdbcTemplate"/>
     </bean>
 
 </beans>

@@ -1,0 +1,45 @@
+package DeleteUsingInterface;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+/**
+ * Hello world!
+ *
+*/
+public class App 
+{
+    public static void main( String[] args )
+    {
+
+        System.out.println( "My program Started." );
+        //spring jdbc -> JDBC Template Object
+        ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
+        StudentDao studentdao= context.getBean("deletestudentDao", StudentDao.class);
+
+        /* insert
+        student student = new student();
+        student.setId(5);
+        student.setCity("Simran");
+        student.setName("Gurgaon");
+
+        int result= studentdao.insert(student);
+        System.out.println("Student Added " + result);
+
+        Update...
+
+
+        student student = new student();
+        student.setId(6);
+        student.setCity("Kanpur");
+        student.setName("Komal");
+        int result= studentdao.change(student);
+        System.out.println("Record updated..." + result);
+
+         */
+       int result = studentdao.delete(5);
+        System.out.println(result + " row deleted.");
+
+
+    }
+}
