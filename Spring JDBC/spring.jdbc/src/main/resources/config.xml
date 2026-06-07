@@ -41,4 +41,8 @@
         <property name="jdbcTemplate" ref="jdbcTemplate"/>
     </bean>
 
+    <bean class="SelectMultipleRowQueryImplementation.StudentDaoImplements" name="multiplestudentDao">
+        <property name="jdbcTemplate" ref="jdbcTemplate"/>
+    </bean>
+
 </beans>
