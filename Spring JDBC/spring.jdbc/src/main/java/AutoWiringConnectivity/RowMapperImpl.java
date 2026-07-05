@@ -1,4 +1,4 @@
-package ConnectionUsingJdbcConfig;
+package AutoWiringConnectivity;
 
 import org.springframework.jdbc.core.RowMapper;
 

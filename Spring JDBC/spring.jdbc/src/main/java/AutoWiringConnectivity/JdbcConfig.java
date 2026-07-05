@@ -1,7 +1,9 @@
-package ConnectionUsingJdbcConfig;
+package AutoWiringConnectivity;
 
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.ComponentScans;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
@@ -9,6 +11,7 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import javax.sql.DataSource;
 
 @Configuration
+@ComponentScan(basePackages = {"package AutoWiringConnectivity"})
 public class JdbcConfig {
     @Bean("ds")
     public DataSource getDataSource() {
@@ -27,10 +30,4 @@ public class JdbcConfig {
          return  jdbcTemplate;
     }
 
-    @Bean("studentDao")
-    public StudentDao getStudentDao() {
-      StudentDaoImplements studentDao = new StudentDaoImplements();
-        studentDao.setJdbcTemplate(getTemplate());
-        return studentDao;
-    }
 }

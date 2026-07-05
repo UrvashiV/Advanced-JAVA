@@ -1,4 +1,4 @@
-package ConnectionUsingJdbcConfig;
+package AutoWiringConnectivity;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package ConnectionUsingJdbcConfig;
+package AutoWiringConnectivity;
 
 public class student {
 
