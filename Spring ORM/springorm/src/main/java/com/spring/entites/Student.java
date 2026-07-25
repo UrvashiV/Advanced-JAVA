@@ -48,4 +48,15 @@ public class Student {
     public void setStudentCity(String studentCity) {
         StudentCity = studentCity;
     }
+
+    @Override
+    public String toString() {
+        return "\nStudent{" +
+                "StudentID=" + StudentID +
+                ", StudentName='" + StudentName + '\'' +
+                ", StudentCity='" + StudentCity + '\'' +
+                '}';
+    }
+
+
 }
